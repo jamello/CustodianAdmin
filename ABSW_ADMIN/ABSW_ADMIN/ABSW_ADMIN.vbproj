@@ -211,6 +211,13 @@
       <DependentUpon>AD130.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="AD132.aspx.designer.vb">
+      <DependentUpon>AD132.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD132.aspx.vb">
+      <DependentUpon>AD132.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="AD140.aspx.designer.vb">
       <DependentUpon>AD140.aspx</DependentUpon>
     </Compile>
@@ -383,6 +390,7 @@
     <Content Include="AD111.aspx" />
     <Content Include="AD112.aspx" />
     <Content Include="AD122.aspx" />
+    <Content Include="AD132.aspx" />
     <Content Include="AD180.aspx" />
     <Content Include="calendar.css" />
     <Content Include="calendar_eu.js" />

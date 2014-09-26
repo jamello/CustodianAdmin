@@ -89,10 +89,9 @@ Partial Public Class AD122
         oRpt = New ReportDocument
 
         reportpath = SiteGlobal.ReportPath
-        reportname = "ADMIN_TELEPHONE.rpt"
+        reportname = Request.QueryString("reptname")
         reportPath = reportPath & reportname
         oRpt.Load(reportpath)
-        'oRpt.r()
 
 
         '*********************************************************
@@ -153,7 +152,6 @@ Partial Public Class AD122
             'Control or streaming to pdf or excel
             '*********************************************************
             'using a viewer
-            oRpt.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape
 
             With CrystalReportViewer1
                 .ParameterFieldInfo = oRpt.ParameterFields
@@ -175,6 +173,7 @@ Partial Public Class AD122
 
             ''for Pdf
             'Dim oStream As New MemoryStream 'using System.IO
+            'oRpt.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape
             'oStream = oRpt.ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat)
             'Response.Clear()
             'Response.Buffer = True

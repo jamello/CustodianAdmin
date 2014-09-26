@@ -322,6 +322,15 @@ Partial Public Class AD130
     Protected WithEvents lblServiceComp As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''cmbServiceComp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cmbServiceComp As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''txtServiceComp control.
     '''</summary>
     '''<remarks>

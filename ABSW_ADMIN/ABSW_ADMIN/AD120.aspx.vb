@@ -33,7 +33,7 @@ Partial Public Class AD120
 
 
             SetComboBinding(ddlBraNum, acRepo.GetBranches(), "BranchName", "BranchNo")
-            'SetComboBinding(ddlDeptNum, acRepo.GetDepartments(), "LongDesc", "dId")
+            SetComboBinding(ddlDeptNum, acRepo.GetDepartments(), "LongDesc", "dId")
 
             If strKey IsNot Nothing Then
                 FillValues()
@@ -92,6 +92,7 @@ Partial Public Class AD120
 
             'lblError.Visible = False
             ebill.BranchCode = ddlBraNum.SelectedValue.ToString()
+            ebill.Department = ddlDeptNum.SelectedValue.ToString()
             ebill.MeterNo = txtTransNum.Text
             ebill.PeriodPaidFor = txtPeriodPaidFor.Text
             ebill.AccountNo = txtAccountNo.Text
@@ -109,6 +110,8 @@ Partial Public Class AD120
             ebill = CType(Session("ebill"), ElectricityBill)
 
             ebill.BranchCode = ddlBraNum.SelectedValue.ToString()
+            ebill.Department = ddlDeptNum.SelectedValue.ToString()
+
             'ebill.MeterNo = txtTransNum.Text
             ebill.PeriodPaidFor = txtPeriodPaidFor.Text
             ebill.AccountNo = txtAccountNo.Text
@@ -128,6 +131,7 @@ Partial Public Class AD120
     End Sub
     Private Sub initializeFields()
         ddlBraNum.SelectedIndex = -1
+        ddlDeptNum.SelectedIndex = -1
         txtTransNum.Text = String.Empty
         txtPeriodPaidFor.Text = String.Empty
         txtAccountNo.Text = String.Empty
@@ -152,11 +156,12 @@ Partial Public Class AD120
         If ebill IsNot Nothing Then
             With ebill
                 ddlBraNum.SelectedValue = ebill.BranchCode
+                ddlDeptNum.SelectedValue = ebill.Department
                 txtTransNum.Text = ebill.MeterNo
                 txtPeriodPaidFor.Text = ebill.PeriodPaidFor
                 txtAccountNo.Text = ebill.AccountNo
                 txtTransDate.Text = ValidDateFromDB(ebill.TransDate)
-                txtTransAmt.Text = ebill.TransAmount
+                txtTransAmt.Text = Math.Round(CType(ebill.TransAmount, Decimal), 2)
                 Session("ebill") = ebill
             End With
 

@@ -178,6 +178,42 @@ Partial Public Class AD120
     Protected WithEvents txtBraNum As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''lblDeptNum control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDeptNum As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''ddlDeptNum control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlDeptNum As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''txtDeptNum control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDeptNum As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtDeptName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtDeptName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''lblTransDate control.
     '''</summary>
     '''<remarks>

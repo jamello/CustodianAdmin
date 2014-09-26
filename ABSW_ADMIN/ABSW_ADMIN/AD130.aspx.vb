@@ -20,6 +20,11 @@ Partial Public Class AD130
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'SessionProvider.RebuildSchema()
+        'txtTransNum.Attributes.Add("disabled", "disabled")
+        ddlBraNum.Attributes.Add("disabled", "disabled")
+        ddlDeptNum.Attributes.Add("disabled", "disabled")
+        txtServiceComp.Attributes.Add("disabled", "disabled")
+
 
         If Not Page.IsPostBack Then
             vmRepo = New VehicleMaintRepository
@@ -34,6 +39,7 @@ Partial Public Class AD130
             SetComboBinding(cmbVehicle, acRepo.GetAdminCodes("001"), "ItemDesc", "ItemCode")
             SetComboBinding(ddlBraNum, acRepo.GetBranches(), "BranchName", "BranchNo")
             SetComboBinding(ddlDeptNum, acRepo.GetDepartments(), "LongDesc", "dId")
+            SetComboBinding(cmbServiceComp, acRepo.GetAdminCodes("002"), "ItemDesc", "ItemCode")
 
             If strKey IsNot Nothing Then
                 FillValues()

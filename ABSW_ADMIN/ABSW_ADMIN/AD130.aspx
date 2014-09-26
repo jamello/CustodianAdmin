@@ -66,7 +66,13 @@ End Sub
         $(document).ready(function() {
 
             $("#cmbVehicle").css("left", "-9999em");
-    
+
+            $("#cmbServiceComp").on('focusout', function(e) {
+                e.preventDefault();
+                $("#txtServiceComp").val() = $("#cmbServiceComp").text()
+                return false;
+            });
+
             $("#txtTransNum").on('focusout', function(e) {
                 e.preventDefault();
                 if ($("#txtTransNum").val() != "")
@@ -155,8 +161,8 @@ End Sub
 
 
 </head>
-<body>
-    <form id="Form1" name="Form1" runat="server">
+<body >
+    <form id="Form1" name="Form1" runat="server" submitdisabledcontrols=true>
     <div class="div_container_02">
     <br />
     <table align="center" border="0" class="tbl_main">
@@ -247,7 +253,8 @@ End Sub
                     </tr>
                     <tr>
                         <td align="right" valign="top"><asp:Label ID="lblServiceComp" Text="Service Company:" runat="server"></asp:Label>&nbsp;</td>
-                        <td valign="top"><asp:TextBox ID="txtServiceComp"  Width="300"  runat="server" MaxLength=50></asp:TextBox>
+                        <td valign="top"><asp:DropDownList ID="cmbServiceComp" Width="300" runat="server"></asp:DropDownList>                       
+                        <asp:TextBox ID="txtServiceComp"  Width="150"  runat="server" MaxLength=50 ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

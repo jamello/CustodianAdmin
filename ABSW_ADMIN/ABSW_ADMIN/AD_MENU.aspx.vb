@@ -46,7 +46,7 @@
                 'strPAGE_MENU = strPAGE_MENU & "&nbsp; <a href='AD40HOME.aspx' target='fra_entry_01'>MAIN MENU</a>"
                 strPAGE_MENU = strPAGE_MENU & "&nbsp; &nbsp;<a href='AD111.aspx' target='fra_entry_01'>Codes Setup</a>"
                 strPAGE_MENU = strPAGE_MENU & "&nbsp; &nbsp;<a href='AD140.aspx' target='fra_entry_01'>Transaction</a>"
-                strPAGE_MENU = strPAGE_MENU & "&nbsp; &nbsp;<a href='AD142.aspx' target='fra_entry_01'>Report</a>"
+                strPAGE_MENU = strPAGE_MENU & "&nbsp; &nbsp;<a href='AD142.aspx?reptname=ADMIN_EQUIP_REPAIRS_LIST.rpt' target='fra_entry_01'>Report</a>"
                 strPAGE_MENU = strPAGE_MENU & "&nbsp; &nbsp;<a href='Default.aspx?mopt=repairs'>HOME PAGE</a>"
                 'Me.fra_entry_01.InnerHtml = "ad40home.aspx"
             Case "DIESEL"

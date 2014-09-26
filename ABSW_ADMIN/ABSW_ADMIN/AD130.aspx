@@ -68,9 +68,10 @@ End Sub
             $("#cmbVehicle").css("left", "-9999em");
 
             $("#cmbServiceComp").on('focusout', function(e) {
-                e.preventDefault();
-                $("#txtServiceComp").val() = $("#cmbServiceComp").text()
-                return false;
+            e.preventDefault();
+            $("#txtServiceComp").attr("value", $("#cmbServiceComp option:selected").text())
+
+            //    return false;
             });
 
             $("#txtTransNum").on('focusout', function(e) {
@@ -162,7 +163,7 @@ End Sub
 
 </head>
 <body >
-    <form id="Form1" name="Form1" runat="server" submitdisabledcontrols=true>
+    <form id="Form1" name="Form1" runat="server" submitdisabledcontrols="True">
     <div class="div_container_02">
     <br />
     <table align="center" border="0" class="tbl_main">

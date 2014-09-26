@@ -24,6 +24,7 @@ Partial Public Class AD130
         ddlBraNum.Attributes.Add("disabled", "disabled")
         ddlDeptNum.Attributes.Add("disabled", "disabled")
         txtServiceComp.Attributes.Add("disabled", "disabled")
+        txtUserName.Attributes.Add("disabled", "disabled")
 
 
         If Not Page.IsPostBack Then
@@ -124,7 +125,7 @@ Partial Public Class AD130
             ' vmbill.EntryDate = Date.Now
             'vmbill.EntryFlag = "A"
             'vmbill.OperatorId = "001"
-            vmbill.VehicleNo = txtTransNum.Text
+            'vmbill.VehicleNo = txtTransNum.Text
             vmbill.TransDate = ValidDate(txtTransDate.Text)
             vmbill.TransAmount = Math.Round(CType(txtTransAmt.Text, Decimal), 2)
 
